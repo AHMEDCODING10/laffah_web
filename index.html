@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق لَفَّة (Laffah) — مشاوير الدراجات النارية وتوصيل الطرود في صنعاء</title>
+  <meta name="description"
+    content="تطبيق لَفَّة هو منصتك الذكية الأولى في صنعاء للمشاوير السريعة بالدراجات النارية وتوصيل الطرود الفوري بأمان وتكلفة عادلة. حمّل التطبيق الآن مباشرة بصيغة APK.">
+  <meta name="keywords"
+    content="تطبيق لفة, لفة, توصيل صنعاء, دراجات نارية صنعاء, مواتير صنعاء, تاكسي صنعاء, طرود صنعاء, laffah yemen">
+  <link rel="icon" type="image/jpeg" href="assets/images/laffah_logo.jpeg">
+  <meta name="theme-color" content="#FF9800">
+
+  <!-- Open Graph / WhatsApp / Facebook Preview Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="تطبيق لَفَّة (Laffah) — أسرع مشوار وتوصيل فوري في صنعاء 🇾🇪">
+  <meta property="og:description"
+    content="منصة النقل الذكية الأولى المخصصة للدراجات النارية لنقل الركاب وتوصيل الطرود في شوارع صنعاء، متجاوزاً أشد الاختناقات المرورية بأمان وتكلفة واضحة. حمّل التطبيق الآن مباشرة.">
+  <meta property="og:image" content="assets/images/laffah_logo.jpeg">
+  <meta property="og:site_name" content="تطبيق لَفَّة">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="تطبيق لَفَّة (Laffah) — مشاوير وطرود صنعاء">
+  <meta name="twitter:description"
+    content="تطبيق المشاوير السريعة وتوصيل الأمانات بالدراجات النارية في صنعاء. حمّل ملف الـ APK المباشر الآن.">
+  <meta name="twitter:image" content="assets/images/laffah_logo.jpeg">
+
+  <!-- Google Fonts: IBM Plex Sans Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Cinematic Animated Dynamic Background & Ambient Glows -->
+  <div class="cinematic-bg-container" aria-hidden="true">
+    <canvas id="cinematicCanvas" class="cinematic-canvas"></canvas>
+    <div class="mesh-orb orb-1"></div>
+    <div class="mesh-orb orb-2"></div>
+    <div class="mesh-orb orb-3"></div>
+    <div class="ambient-grid-overlay"></div>
+  </div>
+
+  <!-- Glassmorphic Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <img src="assets/images/laffah_logo.jpeg" alt="شعار لَفَّة" class="nav-logo">
+        <div class="brand-text">
+          <span class="brand-name">لَفَّة</span>
+          <span class="brand-tag">Laffah App</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about">عن التطبيق</a>
+        <a href="#screenshots">الشاشات</a>
+        <a href="#how-it-works">طريقة العمل</a>
+        <a href="#install-guide">دليل التثبيت</a>
+        <a href="#faq">الأسئلة الشائعة</a>
+        <a href="#feedback">شاركنا رأيك</a>
+      </nav>
+
+      <div class="header-cta-group">
+        <button id="shareBtnTop" class="btn btn-secondary-share" title="شارك الرابط مع أصدقائك">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          <span class="btn-text-share">مشاركة</span>
+        </button>
+
+        <a href="https://github.com/AHMEDCODING10/laffah/releases/download/Laffah/Laffah.apk"
+          class="btn btn-header-download download-trigger" download="Laffah.apk">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>تحميل APK</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section — Clean & Glassmorphic -->
+  <section class="hero-section" id="about">
+    <div class="container">
+      <div class="glass-card hero-glass-card">
+
+        <div class="hero-content-row">
+          <!-- Logo & Badges -->
+          <div class="hero-logo-box">
+            <img src="assets/images/laffah_logo.jpeg" alt="تطبيق لَفَّة" class="hero-app-logo">
+            <div class="verified-indicator" title="تطبيق رسمي موثق">✓</div>
+          </div>
+
+          <!-- Hero Texts -->
+          <div class="hero-text-box">
+            <div class="tag-row">
+              <span class="glass-pill">صنعاء، اليمن 🇾🇪</span>
+              <span class="glass-pill orange-pill">مشاوير الدراجات النارية الفورية</span>
+              <span class="glass-pill green-pill">إصدار بيتا التجريبي المباشر</span>
+            </div>
+
+            <h1 class="main-heading">لَفَّة — أسرع مشوار وتوصيل فوري</h1>
+            <p class="sub-heading">
+              منصة النقل الذكية الأولى المخصصة للدراجات النارية (المواتير) لنقل الركاب وتوصيل الطرود في شوارع صنعاء،
+              متجاوزاً أشد الاختناقات المرورية بأمان وبأجرة عادلة محسوبة بالمسافة.
+            </p>
+
+            <!-- Direct Download Action & Share -->
+            <div class="hero-actions">
+              <a href="https://github.com/AHMEDCODING10/laffah/releases/download/Laffah/Laffah.apk"
+                class="btn btn-primary btn-hero-download download-trigger" download="Laffah.apk">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>حمّل التطبيق الآن (APK مباشر)</span>
+              </a>
+
+              <button id="heroShareBtn" class="btn btn-secondary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span>انشر الفكرة لأصدقائك</span>
+              </button>
+
+              <a href="#install-guide" class="btn btn-ghost-link">
+                <span>طريقة التثبيت السريع ←</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Highlights Row -->
+        <div class="highlights-row">
+          <div class="highlight-item">
+            <span class="h-icon">🏍️</span>
+            <div>
+              <span class="h-title">مشاوير سريعة</span>
+              <span class="h-desc">تجاوز الزحام والوصول بأقصر وقت</span>
+            </div>
+          </div>
+
+          <div class="highlight-sep"></div>
+
+          <div class="highlight-item">
+            <span class="h-icon">📦</span>
+            <div>
+              <span class="h-title">توصيل الطرود</span>
+              <span class="h-desc">إرسال أماناتك فوراً من الباب إلى الباب</span>
+            </div>
+          </div>
+
+          <div class="highlight-sep"></div>
+
+          <div class="highlight-item">
+            <span class="h-icon">📍</span>
+            <div>
+              <span class="h-title">تتبع مباشر</span>
+              <span class="h-desc">متابعة موقع الكابتن حياً على الخريطة</span>
+            </div>
+          </div>
+
+          <div class="highlight-sep"></div>
+
+          <div class="highlight-item">
+            <span class="h-icon">💳</span>
+            <div>
+              <span class="h-title">دفع ومحافظ رقمية</span>
+              <span class="h-desc">نقداً أو عبر الكريمي وفلوسك وجيب</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery Section (7 شاشات واقعية تغطي التطبيق بالكامل) -->
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">معرض الشاشات</span>
+        <h2 class="section-heading">تجربة استخدام عربية سلسة ومتقنة</h2>
+        <p class="section-subtext">واجهات مصممة خصيصاً لتناسب سرعة احتياجاتك في صنعاء، سواءً كنت راكباً أو كابتناً.</p>
+      </div>
+
+      <!-- Carousel Track -->
+      <div class="carousel-outer">
+        <button class="nav-arrow prev-arrow" id="prevBtn" aria-label="الشاشة السابقة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="screenshots-slider" id="screensSlider">
+
+          <!-- Screen 1: Welcome & Signup -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_1.jpg" alt="شاشة البداية والتسجيل" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 1</span>
+              <h3 class="screen-name">البداية واختيار الحساب</h3>
+              <p class="screen-detail">تسجيل سلس ومباشر للركاب أو الانضمام الفوري لفريق كباتن لَفَّة.</p>
+            </div>
+          </div>
+
+          <!-- Screen 2: Booking Ride -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_2.jpg" alt="تفاصيل حجز اللفة وتحديد المسار" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 2</span>
+              <h3 class="screen-name">حجز اللفة وتحديد المسار</h3>
+              <p class="screen-detail">تحديد نقطة الانطلاق والوصول ومعرفة الأجرة المحسوبة مسبقاً بدقة.</p>
+            </div>
+          </div>
+
+          <!-- Screen 3: Search Radar -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_3.jpg" alt="البحث اللحظي والرادار الذكي" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 3</span>
+              <h3 class="screen-name">الرادار والبحث اللحظي</h3>
+              <p class="screen-detail">بحث فوري عن أقرب دراجة نارية في محيطك مع ظهور وقت الوصول بدقة.</p>
+            </div>
+          </div>
+
+          <!-- Screen 4: Parcel Delivery -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_4.jpg" alt="توصيل الطرود والأمانات" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 4</span>
+              <h3 class="screen-name">توصيل الطرود والأمانات</h3>
+              <p class="screen-detail">إرسال أماناتك وطرودك مع بيانات المرسل والمستلم وتأمين التسليم.</p>
+            </div>
+          </div>
+
+          <!-- Screen 5: Passenger Wallet -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_5.jpg" alt="محفظة لَفَّة الرقمية" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 5</span>
+              <h3 class="screen-name">المحفظة الرقمية والدفع</h3>
+              <p class="screen-detail">رصيد آمن ومتابعة دقيقة لكافة المعاملات وشحن الرصيد بسهولة.</p>
+            </div>
+          </div>
+
+          <!-- Screen 6: Captain Radar Live -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_6.jpg" alt="رادار الكابتن في شوارع صنعاء" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 6</span>
+              <h3 class="screen-name">رادار الكابتن وتلقي الطلبات</h3>
+              <p class="screen-detail">خريطة حية تفاعلية تمكّن الكابتن من استقبال الطلبات القريبة فوراً.</p>
+            </div>
+          </div>
+
+          <!-- Screen 7: Captain Earnings -->
+          <div class="screen-item">
+            <div class="device-frame">
+              <img src="assets/images/screen_7.jpg" alt="محفظة أرباح الكابتن والسحب" class="screen-preview-img"
+                loading="lazy">
+            </div>
+            <div class="screen-info">
+              <span class="screen-tag">الشاشة 7</span>
+              <h3 class="screen-name">أرباح الكابتن والسحب السريع</h3>
+              <p class="screen-detail">تحويل أرباح الرحلات عبر الكريمي، جيب، فلوسك، ون كاش بكل أمان.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="nav-arrow next-arrow" id="nextBtn" aria-label="الشاشة التالية">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Dots Indicators -->
+      <div class="slider-dots" id="sliderDots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="features-section" id="how-it-works">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">طريقة العمل</span>
+        <h2 class="section-heading">كيف تخدمك منصة لَفَّة؟</h2>
+        <p class="section-subtext">3 خطوات بسيطة تختصر عليك ساعات من الزحام والانتظار المرهق.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="glass-card feature-card">
+          <div class="f-icon-circle">1</div>
+          <h3 class="f-title">حدد وجهتك أو طردك</h3>
+          <p class="f-desc">افتح التطبيق وحدد موقعك الحالي ووجهتك على الخريطة التفاعلية، أو اختر خدمة توصيل الطرد مع
+            بيانات المستلم.</p>
+        </div>
+
+        <div class="glass-card feature-card">
+          <div class="f-icon-circle">2</div>
+          <h3 class="f-title">اعرف التكلفة مسبقاً</h3>
+          <p class="f-desc">خوارزمية ذكية تحسب التسعيرة العادلة بناءً على المسافة الفعلية دون أي مساومة أو مفاجآت عند
+            الوصول.</p>
+        </div>
+
+        <div class="glass-card feature-card">
+          <div class="f-icon-circle">3</div>
+          <h3 class="f-title">كابتن معتمد يصلك بدقائق</h3>
+          <p class="f-desc">يبحث النظام عن أقرب دراجة نارية في محيطك لتصل إليك بسرعة فائقة وتوصلك أو تسلم أمانتك بأمان.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-Step Installation Guide (دليل تثبيت ملف APK المبسط وتخطي التنبيه) -->
+  <section class="install-guide-section" id="install-guide">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">تثبيت سهل ومباشر</span>
+        <h2 class="section-heading">كيف تثبّت التطبيق على هاتفك في ثوانٍ؟</h2>
+        <p class="section-subtext">بما أن التطبيق بنسخته التجريبية المباشرة (APK)، اتبع هذه الخطوات الـ 3 البسيطة:</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="glass-card step-card">
+          <div class="step-badge-num">1</div>
+          <div class="step-icon-wrap">📥</div>
+          <h3 class="step-title">تحميل الملف</h3>
+          <p class="step-desc">
+            اضغط على زر <strong>"تحميل APK"</strong>، وسيبدأ هاتفك مباشرة في تنزيل ملف <code>Laffah.apk</code> الرسمي من
+            خوادمنا.
+          </p>
+        </div>
+
+        <div class="glass-card step-card highlight-step">
+          <div class="step-badge-num">2</div>
+          <div class="step-icon-wrap">🛡️</div>
+          <h3 class="step-title">تخطي تنبيه الحماية</h3>
+          <p class="step-desc">
+            إذا أظهر أندرويد تنبيه <em>"قد يكون الملف ضاراً"</em>، لا تقلق! هذا تنبيه روتيني لأي ملف خارج المتجر، اضغط
+            ببساطة على:
+            <span class="highlight-action-pill">التنزيل على أي حال (Download anyway)</span>
+          </p>
+        </div>
+
+        <div class="glass-card step-card">
+          <div class="step-badge-num">3</div>
+          <div class="step-icon-wrap">🚀</div>
+          <h3 class="step-title">التثبيت والانطلاق</h3>
+          <p class="step-desc">
+            افتح الملف المكتمل واضغط <strong>"تثبيت" (Install)</strong>، ثم افتح التطبيق وابدأ أول لَفَّة أو مشوار في
+            شوارع صنعاء!
+          </p>
+        </div>
+      </div>
+
+      <!-- iOS Notice Card -->
+      <div class="ios-notice-box glass-card">
+        <div class="ios-notice-inner">
+          <span class="ios-icon">🍏</span>
+          <div>
+            <h4 class="ios-title">هل تستخدم هاتف آيفون (iPhone)؟</h4>
+            <p class="ios-desc">
+              نسخة نظام iOS قيد التطوير حالياً وستكون متاحة قريباً جداً على App Store. يمكنك مشاركة الرابط مع أصدقائك
+              مستخدمي أندرويد لتجربة التطبيق الآن!
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section (قسم الأسئلة الشائعة الأكورديون) -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-badge">الأسئلة الشائعة</span>
+        <h2 class="section-heading">كل ما تود معرفته عن لَفَّة</h2>
+        <p class="section-subtext">إجابات واضحة ومباشرة لأكثر الاستفسارات شيوعاً.</p>
+      </div>
+
+      <div class="faq-accordion-wrap">
+
+        <div class="faq-item glass-card">
+          <button class="faq-question">
+            <span>ما هو تطبيق لَفَّة وكيف يحل مشكلة المواصلات في صنعاء؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>تطبيق لَفَّة هو أول تطبيق ذكي يمني يربط الركاب وأصحاب الطرود بسائقي الدراجات النارية (المواتير) المعتمدين
+              في صنعاء، لتفادي الزحام الخانق والوصول بوقت قياسي وبتكلفة منخفضة وعادلة للجميع.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <button class="faq-question">
+            <span>كيف يتم احتساب سعر المشوار أو الطرد؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>يقوم النظام الذكي بقياس المسافة الفعلية بدقة عبر الخريطة والـ GPS واحتساب الأجرة تلقائياً قبل أن تضغط على
+              تأكيد الحجز، دون أي مزايدة أو مساومة شفهية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <button class="faq-question">
+            <span>هل التطبيق مجاني بالكامل؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>نعم! تحميل التطبيق واستخدامه مجاني 100% وبدون أي رسوم اشتراك، وأنت تدفع فقط قيمة المشوار للكابتن أو عبر
+              المحفظة الرقمية.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <button class="faq-question">
+            <span>كيف أضمن وصول طردي أو أمانتي بأمان؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>يتم تسجيل بيانات الكابتن المعتمد بدقة، ويمكنك متابعة مساره لحظة بلحظة على الخريطة الحية ومشاركة رابط
+              التتبع المباشر مع المستلم لضمان استلام الطرد باليد.</p>
+          </div>
+        </div>
+
+        <div class="faq-item glass-card">
+          <button class="faq-question">
+            <span>أنا سائق دراجة نارية، كيف انضم ككابتن لكسب دخل يومي؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>أهلاً بك في عائلة لَفَّة! يمكنك تحميل التطبيق واختيار "تسجيل حساب كابتن (سائق)"، أو مراسلتنا مباشرة عبر
+              واتساب وسيقوم فريقنا بتفعيل حسابك لتبدأ في استقبال الرحلات وجني الأرباح فوراً.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Beta Feedback & WhatsApp Connect (نموذج إبداء الرأي برقم الواتساب المخصص) -->
+  <section class="feedback-section" id="feedback">
+    <div class="container">
+      <div class="glass-card feedback-card">
+        <div class="feedback-inner">
+          <div class="feedback-avatar-wrap">
+            <img src="assets/images/chatbot_avatar.png" alt="مساعد لَفَّة الذكي" class="feedback-avatar-img">
+          </div>
+          <div class="feedback-content">
+            <span class="feedback-badge">مجتمع لَفَّة التجريبي</span>
+            <h2 class="feedback-heading">رأيك واقتراحاتك تصنع مستقبل التطبيق!</h2>
+            <p class="feedback-desc">
+              بما أنك من أوائل الأصدقاء والمستخدمين لتطبيق <strong>لَفَّة</strong>، نود سماع تجربتك الصادقة! هل لديك
+              فكرة، ملاحظة، أو واجهت مشكلة؟ تواصل معنا مباشرة عبر شات واتساب.
+            </p>
+            <div class="feedback-actions">
+              <a href="https://wa.me/967770291452?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%84%D9%8E%D9%81%D9%8E%D9%91%D8%A9%D8%8C%20%D9%84%D8%AF%D9%8A%20%D9%85%D9%84%D8%A7%D8%AD%D8%B8%D8%A9%20/%20%D8%A7%D9%82%D8%AA%D8%B1%D8%A7%D8%AD%20%D8%AD%D9%88%D9%84%20%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82:"
+                target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-chat">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.31z" />
+                </svg>
+                <span>أرسل ملاحظتك عبر واتساب </span>
+              </a>
+
+              <button id="feedbackShareBtn" class="btn btn-secondary-share">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span>مشاركة الرابط مع صديق</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clear Dedicated Download Section at Bottom (زر واضح وجميل أسفل الموقع) -->
+  <section class="bottom-cta-section" id="download">
+    <div class="container">
+      <div class="glass-card cta-box">
+        <div class="cta-inner">
+          <span class="cta-badge">جاهز لتجربة أسرع لَفَّة؟</span>
+          <h2 class="cta-title">حمّل تطبيق لَفَّة الآن وابدأ مشوارك</h2>
+          <p class="cta-desc">
+            التطبيق متوفر بصيغة APK للتثبيت المباشر والسريع على كافة أجهزة أندرويد بحجم خفيف وسرعة استجابة فائقة.
+          </p>
+
+          <!-- The Prominent Clear Download Button -->
+          <div class="giant-download-wrapper">
+            <a href="https://github.com/AHMEDCODING10/laffah/releases/download/Laffah/Laffah.apk"
+              class="btn btn-giant-cta download-trigger" id="mainDownloadBtn" download="Laffah.apk">
+              <div class="cta-btn-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </div>
+              <div class="cta-btn-texts">
+                <span class="cta-btn-main">قم بتنزيل التطبيق من هنا (APK)</span>
+                <span class="cta-btn-sub">تنزيل مباشر وسريع • أحدث إصدار معتمد</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="cta-features-check">
+            <span>✓ تنزيل مجاني وآمن 100%</span>
+            <span>✓ متوافق مع كافة أجهزة أندرويد</span>
+            <span>✓ خفيف وسريع ولا يستهلك البطارية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-brand">
+        <img src="assets/images/laffah_logo.jpeg" alt="لَفَّة" class="footer-logo">
+        <div>
+          <span class="footer-name">تطبيق لَفَّة (Laffah App)</span>
+          <p class="footer-copy">مشاوير الدراجات النارية وتوصيل الطرود في صنعاء، اليمن 🇾🇪</p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <a href="https://wa.me/967770291452" target="_blank" rel="noopener noreferrer" class="footer-wa-link">
+          <svg class="footer-wa-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.31z" />
+          </svg>
+          <span>واتساب الدعم</span>
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">الرئيسية</a>
+        <a href="#screenshots">الشاشات</a>
+        <a href="#install-guide">دليل التثبيت</a>
+        <a href="#faq">الأسئلة</a>
+        <a href="#feedback">الملاحظات</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Download Bar (مخصص فقط للهواتف المحمولة ومخفي تماماً على الديسكتوب) -->
+  <aside class="sticky-mobile-bar" id="stickyBar">
+    <div class="sticky-inner">
+      <img src="assets/images/laffah_logo.jpeg" alt="شعار لَفَّة" class="sticky-logo">
+      <div class="sticky-text">
+        <span class="sticky-title">تطبيق لَفَّة</span>
+        <span class="sticky-subtitle">أسرع مشاوير وطرود</span>
+      </div>
+      <a href="https://github.com/AHMEDCODING10/laffah/releases/download/Laffah/Laffah.apk"
+        class="btn btn-sticky-download download-trigger" download="Laffah.apk">
+        <span>تحميل APK</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Floating Direct WhatsApp Action Button -->
+  <aside class="floating-whatsapp-wrap" title="تواصل معنا عبر واتساب">
+    <a href="https://wa.me/967770291452?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%84%D9%8E%D9%81%D9%8E%D9%91%D8%A9%D8%8C%20%D9%84%D8%AF%D9%8A%20%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20/%20%D9%85%D9%84%D8%A7%D8%AD%D8%B8%D8%A9:"
+      target="_blank" rel="noopener noreferrer" class="floating-whatsapp-btn" id="floatingWaBtn">
+      <span class="wa-tooltip">تواصل مع المطور</span>
+      <svg class="wa-floating-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.18-.48-.31z" />
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Download Toast -->
+  <div class="toast-box" id="downloadToast">
+    <div class="toast-inner">
+      <div class="toast-emoji">🚀</div>
+      <div>
+        <h4 class="toast-heading">بدأ تنزيل التطبيق...</h4>
+        <p class="toast-text">يتم الآن تنزيل ملف <strong>Laffah.apk</strong> إلى جهازك مباشرة. راجع إشعارات الهاتف
+          للتثبيت.</p>
+      </div>
+      <button class="toast-dismiss" id="toastClose">&times;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
