@@ -243,17 +243,22 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================
-  // 6. Mobile Sticky Bottom Bar (Visible past Hero on Mobile)
+  // 6. Mobile Sticky Bottom Bar (Visible past Hero, auto-hides when bottom CTA is on screen)
   // ==========================================================
   const stickyBar = document.getElementById('stickyBar');
   const heroSection = document.querySelector('.hero-section');
+  const bottomCtaSection = document.getElementById('download');
 
   if (stickyBar && heroSection) {
     window.addEventListener('scroll', () => {
       // Only process when on mobile screen
       if (window.innerWidth <= 768) {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
-        if (heroBottom < 60) {
+        const bottomCtaTop = bottomCtaSection ? bottomCtaSection.getBoundingClientRect().top : Infinity;
+        const windowHeight = window.innerHeight;
+
+        // Show when scrolled past hero, BUT hide if bottom CTA is already in view to avoid duplication
+        if (heroBottom < 60 && bottomCtaTop > windowHeight - 120) {
           stickyBar.classList.add('visible');
         } else {
           stickyBar.classList.remove('visible');

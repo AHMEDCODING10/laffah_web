@@ -15,7 +15,7 @@
 
   <!-- Open Graph / WhatsApp / Facebook Preview Card -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="تطبيق لَفَّة (Laffah) — أسرع مشوار وتوصيل فوري في صنعاء 🇾🇪">
+  <meta property="og:title" content="تطبيق لَفَّة (Laffah) — أسرع مشوار وتوصيل فوري في صنعاء">
   <meta property="og:description"
     content="منصة النقل الذكية الأولى المخصصة للدراجات النارية لنقل الركاب وتوصيل الطرود في شوارع صنعاء، متجاوزاً أشد الاختناقات المرورية بأمان وتكلفة واضحة. حمّل التطبيق الآن مباشرة.">
   <meta property="og:image" content="assets/images/laffah_logo.webp">
@@ -51,13 +51,9 @@
   <!-- Glassmorphic Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand-group">
+      <a href="#about" class="brand-group" aria-label="شعار تطبيق لَفَّة">
         <img src="assets/images/laffah_logo.webp" alt="شعار لَفَّة" class="nav-logo">
-        <div class="brand-text">
-          <span class="brand-name">لَفَّة</span>
-          <span class="brand-tag">Laffah App</span>
-        </div>
-      </div>
+      </a>
 
       <nav class="nav-links">
         <a href="#about">عن التطبيق</a>
@@ -108,7 +104,13 @@
           <!-- Hero Texts -->
           <div class="hero-text-box">
             <div class="tag-row">
-              <span class="glass-pill">صنعاء، اليمن 🇾🇪</span>
+              <span class="glass-pill pill-location">
+                <svg class="pill-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>صنعاء، اليمن</span>
+              </span>
               <span class="glass-pill orange-pill">مشاوير الدراجات النارية الفورية</span>
               <span class="glass-pill green-pill">إصدار بيتا التجريبي المباشر</span>
             </div>
@@ -149,10 +151,18 @@
           </div>
         </div>
 
-        <!-- Highlights Row -->
+        <!-- Highlights Row (Professional SVG Icons) -->
         <div class="highlights-row">
           <div class="highlight-item">
-            <span class="h-icon">🏍️</span>
+            <div class="h-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="5" cy="16" r="3.2"></circle>
+                <circle cx="19" cy="16" r="3.2"></circle>
+                <path d="M12 16h3l3.5-5.5H15l-2-3H9l-3 8.5"></path>
+                <path d="M14 7.5L16 5h3"></path>
+                <circle cx="11.5" cy="4.5" r="1"></circle>
+              </svg>
+            </div>
             <div>
               <span class="h-title">مشاوير سريعة</span>
               <span class="h-desc">تجاوز الزحام والوصول بأقصر وقت</span>
@@ -162,7 +172,13 @@
           <div class="highlight-sep"></div>
 
           <div class="highlight-item">
-            <span class="h-icon">📦</span>
+            <div class="h-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                <path d="m3.3 7 8.7 5 8.7-5"></path>
+                <path d="M12 22V12"></path>
+              </svg>
+            </div>
             <div>
               <span class="h-title">توصيل الطرود</span>
               <span class="h-desc">إرسال أماناتك فوراً من الباب إلى الباب</span>
@@ -172,7 +188,12 @@
           <div class="highlight-sep"></div>
 
           <div class="highlight-item">
-            <span class="h-icon">📍</span>
+            <div class="h-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
             <div>
               <span class="h-title">تتبع مباشر</span>
               <span class="h-desc">متابعة موقع الكابتن حياً على الخريطة</span>
@@ -182,7 +203,14 @@
           <div class="highlight-sep"></div>
 
           <div class="highlight-item">
-            <span class="h-icon">💳</span>
+            <div class="h-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="14" x="2" y="5" rx="3"></rect>
+                <line x1="2" x2="22" y1="10" y2="10"></line>
+                <circle cx="6" cy="15" r="1"></circle>
+                <circle cx="10" cy="15" r="1"></circle>
+              </svg>
+            </div>
             <div>
               <span class="h-title">دفع ومحافظ رقمية</span>
               <span class="h-desc">نقداً أو عبر الكريمي وفلوسك وجيب</span>
@@ -373,7 +401,13 @@
       <div class="steps-grid">
         <div class="glass-card step-card">
           <div class="step-badge-num">1</div>
-          <div class="step-icon-wrap">📥</div>
+          <div class="step-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
           <h3 class="step-title">تحميل الملف</h3>
           <p class="step-desc">
             اضغط على زر <strong>"تحميل APK"</strong>، وسيبدأ هاتفك مباشرة في تنزيل ملف <code>Laffah.apk</code> الرسمي من
@@ -383,7 +417,12 @@
 
         <div class="glass-card step-card highlight-step">
           <div class="step-badge-num">2</div>
-          <div class="step-icon-wrap">🛡️</div>
+          <div class="step-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+          </div>
           <h3 class="step-title">تخطي تنبيه الحماية</h3>
           <p class="step-desc">
             إذا أظهر أندرويد تنبيه <em>"قد يكون الملف ضاراً"</em>، لا تقلق! هذا تنبيه روتيني لأي ملف خارج المتجر، اضغط
@@ -394,7 +433,14 @@
 
         <div class="glass-card step-card">
           <div class="step-badge-num">3</div>
-          <div class="step-icon-wrap">🚀</div>
+          <div class="step-icon-wrap" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+            </svg>
+          </div>
           <h3 class="step-title">التثبيت والانطلاق</h3>
           <p class="step-desc">
             افتح الملف المكتمل واضغط <strong>"تثبيت" (Install)</strong>، ثم افتح التطبيق وابدأ أول لَفَّة أو مشوار في
@@ -403,10 +449,14 @@
         </div>
       </div>
 
-      <!-- iOS Notice Card -->
+      <!-- iOS Notice Card (Clean Apple Vector Icon) -->
       <div class="ios-notice-box glass-card">
         <div class="ios-notice-inner">
-          <span class="ios-icon">🍏</span>
+          <div class="ios-icon-box" aria-hidden="true">
+            <svg class="ios-svg-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.46c.64-.78 1.08-1.87.96-2.96-.93.04-2.07.62-2.73 1.4-.58.67-1.09 1.76-.95 2.82 1.05.08 2.11-.53 2.72-1.26"></path>
+            </svg>
+          </div>
           <div>
             <h4 class="ios-title">هل تستخدم هاتف آيفون (iPhone)؟</h4>
             <p class="ios-desc">
@@ -575,10 +625,10 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <div class="footer-brand">
-        <img src="assets/images/laffah_logo.webp" alt="لَفَّة" class="footer-logo">
+        <img src="assets/images/laffah_logo.webp" alt="شعار تطبيق لَفَّة" class="footer-logo">
         <div>
           <span class="footer-name">تطبيق لَفَّة (Laffah App)</span>
-          <p class="footer-copy">مشاوير الدراجات النارية وتوصيل الطرود في صنعاء، اليمن 🇾🇪</p>
+          <p class="footer-copy">مشاوير الدراجات النارية وتوصيل الطرود في صنعاء، اليمن</p>
         </div>
       </div>
 
@@ -632,7 +682,13 @@
   <!-- Download Toast -->
   <div class="toast-box" id="downloadToast">
     <div class="toast-inner">
-      <div class="toast-emoji">🚀</div>
+      <div class="toast-icon-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+      </div>
       <div>
         <h4 class="toast-heading">بدأ تنزيل التطبيق...</h4>
         <p class="toast-text">يتم الآن تنزيل ملف <strong>Laffah.apk</strong> إلى جهازك مباشرة. راجع إشعارات الهاتف
